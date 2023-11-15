@@ -7,7 +7,7 @@ app = create_app()
 db.init_app(app)
 
 
-@app.before_first_request
+@app.before_request
 def init_request():
     db.create_all()
 
